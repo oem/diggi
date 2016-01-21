@@ -29,9 +29,24 @@ module.exports = function(grunt) {
         }
       }
     },
+
     copy: {
       html: { files: [{expand: true, cwd: 'src/tmpl', src: ['*'], dest: 'build/', filter: 'isFile'}] }
     },
+
+    sass: {
+      build: {
+        files: { 'build/css/diggi.css': 'src/css/main.scss' }
+      }
+    },
+
+    cssmin: {
+      build: {
+        src: ['build/css/diggi.css'],
+        dest: 'build/css/diggi.css'
+      }
+    },
+
     connect: {
       server: {
         options: {
@@ -39,6 +54,7 @@ module.exports = function(grunt) {
           port: 4000, base: './build' }
       }
     },
+
     watch: {
       options: {
         livereload: true
@@ -47,22 +63,28 @@ module.exports = function(grunt) {
         files: ['src/tmpl/*'],
         tasks: ['buildhtml']
       },
+      css: {
+        files: ['src/css/**/*'],
+        tasks: ['buildcss']
+      },
       javascript: {
         files: ['src/js/**/*'],
-        tasks: ['build']
+        tasks: ['buildjs']
       },
       templates: {
         files: ['src/tmpl/angular/**/*.html'],
         tasks: ['buildjs']
       }
-    }
+    },
+    clean: ["build", "tmp"]
   });
 
   grunt.registerTask('buildjs', ['html2js:dist', 'uglify']);
   grunt.registerTask('buildhtml', ['copy:html']);
+  grunt.registerTask('buildcss', ['sass', 'cssmin']);
 
   grunt.registerTask('run', ['connect', 'watch']);
-  grunt.registerTask('build', ['buildjs', 'buildhtml']);
+  grunt.registerTask('build', ['clean', 'buildjs', 'buildhtml', 'buildcss']);
   grunt.registerTask('default', ['build']);
 };
 
