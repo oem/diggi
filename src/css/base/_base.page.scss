@@ -19,7 +19,7 @@ html {
   height:                   100%; // [1]
   -ms-touch-action:         manipulation; // [2]
   touch-action:             manipulation; // [2]
-  font-family:              "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family:              "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -36,8 +36,8 @@ p {
   margin: 0;
 }
 
-%page-content {
-  padding: $base-spacing-unit;
+a {
+  color:       $primary-text-color;
+  font-weight: bold;
 }
-
 

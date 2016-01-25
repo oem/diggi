@@ -8,7 +8,7 @@
 
   .unknown-header__more {
     @extend %action-header__content;
-    @extend %page-content;
+    margin: $base-spacing-unit;
   }
 
   .unknown-navigation__link {
@@ -16,17 +16,18 @@
   }
 }
 
-.unknown {
+.unknown-details {
   @extend %grid;
+  @extend %grid--full;
+  margin: $base-spacing-unit;
 }
 
-.unknown__alert,
-.unknown__redirect {
+.unknown-details__alert,
+.unknown-details__redirect {
   @extend %grid__item;
-  @extend %one-half;
 }
 
-.unknown__alert {
+.unknown-details__alert {
   text-transform: uppercase;
 }
 

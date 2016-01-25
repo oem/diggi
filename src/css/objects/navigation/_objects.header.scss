@@ -12,6 +12,11 @@ $header-background-color: $base-background-color !default;
 
   %action-bar__item {
     @extend %grid__item;
+    a {
+      width:   100%;
+      height:  100%;
+      display: inline-block;
+    }
   }
 }
 
@@ -21,16 +26,24 @@ $header-background-color: $base-background-color !default;
   background-color: $header-background-color;
   border-top:       $base-spacing-unit solid $dark-primary-color;
 
+  a {
+    color:           $header-foreground-color;
+    text-decoration: none;
+    font-weight:     normal;
+  }
+
   %action-bar {
     box-shadow:         none;
     -webkit-box-shadow: none;
     -moz-box-shadow:    none;
+
   }
 
   %action-header__content {
     text-transform: uppercase;
     font-size:      2em;
     font-weight:    bold;
+    padding-bottom: $base-spacing-unit;
   }
 }
 
