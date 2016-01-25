@@ -1,8 +1,10 @@
 // SETTINGS: global variables site-wide setting etc
 @import "settings/settings.defaults";
 @import "settings/settings.grid";
+@import "settings/settings.colors";
 
 // TOOLS: side wide mixins and functions
+@import "tools/tools.cross.browser";
 
 // GENERIC: low specificity, like resets
 @import "generic/generic.normalize";
@@ -12,6 +14,7 @@
 
 // OBJECTS: Objects, abstractions and design patterns (e.g. .video)
 @import "objects/csswizardry-grids";
+@import "objects/navigation/objects.header";
 
 // COMPONENTS: Discrete, complete chunks of UI
 @import "components/components.container";

@@ -1,6 +1,37 @@
+.unknown-header {
+  @extend %action-header;
+  background-color: $blue-color;
+  color: white;
+
+  .unknown-header__navigation {
+    @extend %action-bar;
+    padding: $base-spacing-unit;
+    background-color: $blue-color;
+    color: white;
+  }
+
+  .unknown-header__more {
+    @extend %action-header__content;
+    @extend %page-content;
+  }
+
+  .unknown-navigation__link {
+    @extend %action-bar__item;
+  }
+}
+
+
+.unknown {
+  @extend %grid;
+}
+
 .unknown__alert,
 .unknown__redirect {
   @extend %grid__item;
   @extend %one-half;
+}
+
+.unknown__alert {
+  text-transform: uppercase;
 }
 

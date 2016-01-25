@@ -1,0 +1,33 @@
+$header-foreground-color: $base-foreground-color !default;
+$header-background-color: $base-background-color !default;
+
+%action-bar {
+  @extend %grid;
+  @extend %grid--full;
+  @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.16));
+
+  height:           64px;
+  color:            $header-foreground-color;
+  background-color: $header-background-color;
+
+  %action-bar__item {
+    @extend %grid__item;
+  }
+}
+
+%action-header {
+  @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.16));
+
+  %action-bar {
+    box-shadow:         none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow:    none;
+  }
+
+  %action-header__content {
+    text-transform: uppercase;
+    font-size:      2em;
+    font-weight:    bold;
+  }
+}
+

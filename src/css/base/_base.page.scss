@@ -1,13 +1,38 @@
+/*
+[1] make html take up the entire screen
+[2] set touc haction to avoid touch delay on mobile IE
+[3] make body span the whole screen
+[4] remove margin on body so layout containers don't cause extra overflow
+*/
 html {
   font-size:                ($base-font-size / 16px) * 1em;
   line-height:              $base-line-height / $base-font-size;
   background-color:         $base-background-color;
-  color:                    $base-text-color;
+  color:                    $base-foreground-color;
   overflow-y:               scroll;
   min-height:               100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust:     100%;
   -moz-osx-font-smoothing:  grayscale;
   -webkit-font-smoothing:   antialiased;
+  width:                    100%; // [1]
+  height:                   100%; // [1]
+  -ms-touch-action:         manipulation; // [2]
+  touch-action:             manipulation; // [2]
+  font-family:              "Helvetica", "Arial", sans-serif;
+}
+
+body {
+  width:      100%; // [3]
+  min-height: 100%; // [3]
+  margin:     0; // [4]
+}
+
+*[hidden] {
+  display: none !important;
+}
+
+%page-content {
+  padding: $base-spacing-unit;
 }
 
