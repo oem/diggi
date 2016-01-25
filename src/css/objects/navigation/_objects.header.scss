@@ -17,6 +17,8 @@ $header-background-color: $base-background-color !default;
 
 %action-header {
   @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.16));
+  color:            $header-foreground-color;
+  background-color: $header-background-color;
 
   %action-bar {
     box-shadow:         none;

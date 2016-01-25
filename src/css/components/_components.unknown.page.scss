@@ -1,13 +1,9 @@
 .unknown-header {
   @extend %action-header;
-  background-color: $blue-color;
-  color: white;
 
   .unknown-header__navigation {
     @extend %action-bar;
     padding: $base-spacing-unit;
-    background-color: $blue-color;
-    color: white;
   }
 
   .unknown-header__more {
@@ -19,7 +15,6 @@
     @extend %action-bar__item;
   }
 }
-
 
 .unknown {
   @extend %grid;
