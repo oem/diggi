@@ -8,7 +8,7 @@ html {
   font-size:                ($base-font-size / 16px) * 1em;
   line-height:              $base-line-height / $base-font-size;
   background-color:         $base-background-color;
-  color:                    $base-foreground-color;
+  color:                    $primary-text-color;
   overflow-y:               scroll;
   min-height:               100%;
   -webkit-text-size-adjust: 100%;
