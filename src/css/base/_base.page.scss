@@ -41,6 +41,22 @@ a {
   font-weight: bold;
 }
 
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing:    inherit;
+    box-sizing:         inherit;
+  }
+}
+
 %section-shadow {
   @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.16));
 }
