@@ -1,7 +1,10 @@
+$list-background-color: white !default;
+
 %list {
   @extend %grid;
   @extend %grid--full;
   @extend %section-shadow;
+  background-color: $list-background-color;
 
   %list__item {
     @extend %grid__item;
