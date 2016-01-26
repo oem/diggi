@@ -1,0 +1,16 @@
+%list {
+  @extend %grid;
+  @extend %grid--full;
+  @extend %section-shadow;
+
+  %list__item {
+    @extend %grid__item;
+    padding:       $base-spacing-unit;
+    border-bottom: 1px solid $divider-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+

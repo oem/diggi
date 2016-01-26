@@ -4,7 +4,7 @@ $header-background-color: $base-background-color !default;
 %action-bar {
   @extend %grid;
   @extend %grid--full;
-  @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.16));
+  @extend %section-shadow;
 
   height:           64px;
   color:            $header-foreground-color;
@@ -21,7 +21,7 @@ $header-background-color: $base-background-color !default;
 }
 
 %action-header {
-  @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.16));
+  @extend %section-shadow;
   color:            $header-foreground-color;
   background-color: $header-background-color;
   border-top:       $base-spacing-unit solid $dark-primary-color;
