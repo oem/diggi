@@ -5,11 +5,13 @@
   "description": "A pattern library that uses angular to allow for rapid prototyping of rich client webapps",
   "license": "ISC",
   "scripts": {
-    "postinstall": "node_modules/.bin/grunt"
+    "postinstall": "node_modules/.bin/grunt",
+    "start": "node server.js"
   },
   "dependencies": {
     "angular": "^1.4.8",
     "angular-route": "^1.4.8",
+    "express": "^4.13.4",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.7.0",
