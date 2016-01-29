@@ -1,3 +1,7 @@
+.unknown-page {
+  @extend %slide-transition;
+}
+
 .unknown-header {
   @extend %action-header;
 
