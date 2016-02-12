@@ -32,13 +32,34 @@
   }
 }
 
-/* ANIMATIONS THAT WILL SERVE AS COMPONENTS FOR THE TRANSITIONS */
-/* leaving animations */
+%fade-transition {
+  &.ng-leave {
+    @include animation(fadeOut .3s both ease);
+  }
+
+  &.ng-enter {
+    @include animation(fadeIn .3s both ease);
+  }
+}
+
+/* ANIMATIONS THAT WILL SERVE AS COMPONENTS FOR THE TRANSITIONS
+   general support for css animations, modern browsers, IE10+ [http://caniuse.com/#feat=css-animation]
+ */
+
+@include keyframes(fadeIn) {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@include keyframes(fadeOut) {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
 @include keyframes(slideoutleft) {
   to { transform: translatex(-100%); }
 }
 
-/* entering animations */
 @include keyframes(slideInLeft) {
   from { transform:translateX(100%); }
   to   { transform: translateX(0); }

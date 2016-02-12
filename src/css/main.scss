@@ -6,6 +6,7 @@
 
 // TOOLS: side wide mixins and functions
 @import "tools/tools.cross.browser";
+@import "tools/tools.animations.transitions";
 
 // GENERIC: low specificity, like resets
 @import "generic/generic.normalize";
