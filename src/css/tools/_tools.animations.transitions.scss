@@ -42,6 +42,12 @@
   }
 }
 
+%zoom-transition {
+  &.ng-enter {
+    @include animation(zoomOut .3s both ease);
+  }
+}
+
 /* ANIMATIONS THAT WILL SERVE AS COMPONENTS FOR THE TRANSITIONS
    general support for css animations, modern browsers, IE10+ [http://caniuse.com/#feat=css-animation]
  */
@@ -54,6 +60,16 @@
 @include keyframes(fadeOut) {
   from { opacity: 1; }
   to   { opacity: 0; }
+}
+
+@include keyframes(zoomIn) {
+  from { transform: scale(1); opacity: 1; }
+  to   { transform: scale(2); opacity: 0; }
+}
+
+@include keyframes(zoomOut) {
+  from { transform: scale(2); opacity: 0;}
+  to   { transform: scale(1); opacity: 1;}
 }
 
 @include keyframes(slideoutleft) {
